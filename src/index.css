@@ -1,0 +1,56 @@
+/* Custom Fonts & Reset */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Light Theme Variables */
+  --background: #f8f9fa;
+  --panel: #ffffff;
+  --border: #e5e7eb;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --shadow-premium: 0 4px 30px rgba(0, 0, 0, 0.02);
+  --radius-card: 16px;
+  --radius-button: 10px;
+}
+
+/* Dark Theme Variables override */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0f19;
+    --panel: #131c2e;
+    --border: #222f47;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --shadow-premium: 0 4px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
